@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vec-data-inspector"
+version = "0.1.0"
+description = "Read-only structural inspection for AnnData HDF5 files"
+requires-python = ">=3.10"
+dependencies = ["h5py>=3.10,<4", "numpy>=1.24,<3"]
+
+[project.optional-dependencies]
+notebook = ["jupyterlab>=4,<5", "ipykernel>=6,<8", "nbconvert>=7,<8"]
+test = ["pytest>=8,<10", "anndata>=0.10,<0.13", "scipy>=1.11,<2"]
+
+[project.scripts]
+vec-inspect = "vec_data_inspector.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

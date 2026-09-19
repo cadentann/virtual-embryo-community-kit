@@ -1,0 +1,13 @@
+.venv/
+**/.venv/
+local_outputs/
+**/examples/generated/
+**/__pycache__/
+**/.pytest_cache/
+**/*.egg-info/
+*.h5ad
+*.h5
+*.hdf5
+*.zarr/
+*.loom
+tests/blackbox_config.json

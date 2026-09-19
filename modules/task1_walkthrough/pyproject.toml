@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vec-t1-walkthrough"
+version = "0.1.0"
+description = "Synthetic-only Task 1 submission-format walkthrough for the Virtual Embryo Challenge"
+requires-python = ">=3.10"
+dependencies = ["anndata>=0.10,<0.13", "certifi>=2024,<2028", "numpy>=1.26,<3", "pandas>=2,<3", "scipy>=1.11,<2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+notebook = ["jupyterlab>=4,<5", "ipykernel>=6,<8", "nbconvert>=7,<8"]
+
+[project.scripts]
+vec-t1-walkthrough = "vec_t1_walkthrough.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

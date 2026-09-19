@@ -1,0 +1,192 @@
+{
+  "anndata_structure": {
+    "axis_consistency": {
+      "issues": [],
+      "matches_x": true,
+      "obs_index_length": 3,
+      "var_index_length": 4
+    },
+    "layers": {
+      "keys": [],
+      "members": {},
+      "present": true
+    },
+    "n_obs": 3,
+    "n_vars": 4,
+    "obs": {
+      "keys": [
+        "_index",
+        "celltype"
+      ],
+      "members": {
+        "_index": {
+          "dtype": "object",
+          "encoding_type": null,
+          "kind": "dataset",
+          "shape": [
+            3
+          ]
+        },
+        "celltype": {
+          "dtype": "object",
+          "encoding_type": null,
+          "kind": "dataset",
+          "shape": [
+            3
+          ]
+        }
+      },
+      "present": true
+    },
+    "obs_index_name": "_index",
+    "obsm": {
+      "keys": [],
+      "members": {},
+      "present": true
+    },
+    "obvious_missingness": {
+      "note": "Bounded scan of directly stored one-dimensional fields and common categorical codes; not an exhaustive semantic missingness audit.",
+      "obs": {
+        "fields": {
+          "_index": {
+            "complete_scan": true,
+            "missing_in_scanned": 0,
+            "scanned": 3,
+            "total": 3
+          },
+          "celltype": {
+            "complete_scan": true,
+            "missing_in_scanned": 0,
+            "scanned": 3,
+            "total": 3
+          }
+        },
+        "present": true,
+        "scan_limit_per_field": 1000000
+      },
+      "var": {
+        "fields": {
+          "_index": {
+            "complete_scan": true,
+            "missing_in_scanned": 0,
+            "scanned": 4,
+            "total": 4
+          }
+        },
+        "present": true,
+        "scan_limit_per_field": 1000000
+      }
+    },
+    "uns": {
+      "keys": [],
+      "members": {},
+      "present": true
+    },
+    "var": {
+      "keys": [
+        "_index"
+      ],
+      "members": {
+        "_index": {
+          "dtype": "object",
+          "encoding_type": null,
+          "kind": "dataset",
+          "shape": [
+            4
+          ]
+        }
+      },
+      "present": true
+    },
+    "var_index_name": "_index",
+    "var_name_warning": null,
+    "x": {
+      "assessment": "assessed",
+      "chunking": "Read dense rows in blocks of at most 1024.",
+      "chunks": null,
+      "dtype": "float32",
+      "finite": true,
+      "finite_values_seen": 12,
+      "issue": null,
+      "max_finite": 6.0,
+      "min_finite": 0.0,
+      "negative_values_detected": false,
+      "numeric_qc_performed": true,
+      "present": true,
+      "shape": [
+        3,
+        4
+      ],
+      "sparsity_estimate": 0.5,
+      "storage": "dense_dataset",
+      "total_elements": 12,
+      "zero_fraction": 0.5
+    }
+  },
+  "celltype_summary": {
+    "caveat": "Label vocabularies may not be harmonized across developmental stages. Absence of a label is not proof of biological absence.",
+    "counted_observations": 3,
+    "expected_observations": 3,
+    "labels": [
+      {
+        "count": 2,
+        "fraction": 0.6666666666666666,
+        "label": "type_a"
+      },
+      {
+        "count": 1,
+        "fraction": 0.3333333333333333,
+        "label": "type_b"
+      }
+    ],
+    "matches_n_obs": true,
+    "present": true
+  },
+  "file_identity": {
+    "filename": "synthetic_dense_t1_like.h5ad",
+    "fingerprint_note": "This is a local fingerprint, not an authenticated checksum.",
+    "mtime_utc": "omitted from committed example",
+    "path": "examples/generated/synthetic_dense_t1_like.h5ad",
+    "sha256_local_fingerprint": "a6b15ee96e14bd0847919a1935415de31c68cb31800b9686bf5743dba69cf73b",
+    "size_bytes": 12800
+  },
+  "gene_panel": {
+    "duplicates_in_file": [],
+    "duplicates_in_panel": [],
+    "exact_order_match": false,
+    "extra_in_file": [],
+    "file_gene_count": 4,
+    "missing_from_file": [],
+    "panel_fingerprint_note": "Local fingerprint of the supplied panel file; its origin and board association are not authenticated by this tool.",
+    "panel_gene_count": 4,
+    "panel_path": "examples/generated/synthetic_panel_reordered.txt",
+    "panel_sha256_local_fingerprint": "89ed412e859e4addb6e1e2ca90d27e0ad2ab6d9648bc7caf4f326eed0660e411",
+    "reorder_plan_available": true,
+    "reorder_plan_file": "reorder_plan.csv",
+    "reorder_plan_note": "A source-index plan can be written on request. It never changes the inspected file.",
+    "same_unique_set_wrong_order": true
+  },
+  "generated_at_utc": "omitted from committed example",
+  "limitations": [
+    "This is a read-only structural and QC summary, not a scorer or an authorization decision.",
+    "It handles common dense, CSR, and CSC AnnData HDF5 encodings. Unrecognized encodings are reported without materializing them.",
+    "Finite, non-negative values do not establish the required challenge normalization; raw counts or another scale may pass these checks and still be unsuitable for scoring.",
+    "For submissions, n_obs is a sample-size choice under the selected board limits, not a measurement or prediction of embryo size.",
+    "Reports from challenge files may contain unpublished or data-derived details and local paths. Keep them private unless current terms permit sharing; use synthetic fixtures for public examples."
+  ],
+  "read_only_behavior": "This process opens the source with h5py mode 'r' and writes only to the requested report directory; it does not provide OS-level immutability or control other processes.",
+  "report_schema_version": "1.1",
+  "root_keys": [
+    "X",
+    "layers",
+    "obs",
+    "obsm",
+    "uns",
+    "var"
+  ],
+  "spatial_3D_summary": {
+    "present": false,
+    "warning": "No /obsm/spatial_3D field was found."
+  },
+  "tool": "VEC Data Inspector"
+}

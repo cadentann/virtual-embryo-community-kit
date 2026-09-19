@@ -1,0 +1,7 @@
+{
+  "release_root": ".",
+  "inspector_command": ["{python}", "-m", "vec_data_inspector.cli"],
+  "walkthrough_submission_command": ["{python}", "-m", "vec_t1_walkthrough.cli", "demo", "--output", "{output}", "--seed", "20260911"],
+  "walkthrough_notebook": "modules/task1_walkthrough/notebooks/task1_baseline_to_submission.ipynb",
+  "inspector_notebook": "modules/data_inspector/notebooks/vec_data_inspector_demo.ipynb"
+}

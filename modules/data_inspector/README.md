@@ -90,7 +90,7 @@ vec-inspect /path/to/file.h5ad \
 
 For other boards, obtain the named panel from the current official panel index and preserve its source/date separately. The inspector does not infer a board from dimensions.
 
-Useful primary references (accessed 2026-09-11):
+Useful primary references (accessed 2026-09-20):
 
 - [Challenge data and panel guidance](https://virtualembryo.ai/challenge/data)
 - [Panel metadata index](https://virtualembryo.ai/challenge/panels/index.json)
@@ -139,7 +139,7 @@ pip install -e '.[notebook]'
 jupyter lab
 ```
 
-Local Jupyter after this local install is the only supported notebook path. Google Colab is not assessed or supported in this candidate. No Colab bootstrap or public repository URL is included.
+Local Jupyter after this local install is the only supported notebook path. Google Colab is not assessed or supported. No Colab bootstrap is included.
 
 For a non-interactive reproducibility run from the project directory:
 
@@ -158,4 +158,4 @@ python -m pip install -e '.[test]'
 python -m unittest discover -s tests -v
 ```
 
-See [TESTING.md](TESTING.md), [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md), [CHANGELOG.md](CHANGELOG.md), and the repository-level [license proposal](../../LICENSE_PROPOSED.md).
+See [TESTING.md](TESTING.md), [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md), [CHANGELOG.md](CHANGELOG.md), and the repository-level [license](../../LICENSE) and [attribution](../../ATTRIBUTION.md).

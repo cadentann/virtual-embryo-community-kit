@@ -16,7 +16,7 @@ vec-inspect local_outputs/task1_synthetic_prediction.h5ad --report-dir local_out
 
 The A command also writes `local_outputs/task1_synthetic_prediction.h5ad.selection.json`, recording the fixed seed, uniform-without-replacement policy, counts, and a source-local selection fingerprint. The prediction and reports are synthetic and are ignored by Git. The B reports are Markdown and JSON; inspect the terminal `attention` section as well as the files.
 
-For local notebooks, install the relevant `.[notebook]` extra, then start Jupyter from the module directory. This release supports local Jupyter only; Google Colab is **not assessed or supported**. No public URL or Colab bootstrap is included.
+For local notebooks, install the relevant `.[notebook]` extra, then start Jupyter from the module directory. This release supports local Jupyter only; Google Colab is **not assessed or supported**. No Colab bootstrap is included.
 
 In the activated shell, starting at the repository root:
 

@@ -13,7 +13,7 @@ It creates and validates a *submission-shaped* `.h5ad` file. It does **not** pro
 | Local score | Explains the published standalone local scorer (`veckit`) when a permissible target is available | Cannot locally score currently withheld validation or never-distributed test truth |
 | Leaderboard | Leaves score evaluation to the official service | Cannot reproduce server validation without released target data |
 
-As checked on 2026-09-11, Task 1 uses E8.5 and E9.5 released training stages, E10.5 validation, and E12.5 test; the Task-1 release has no E9.25. E10.5 validation truth is currently withheld and evaluated through the leaderboard; the official schedule says it will be released at the final phase on 2026-10-20. E12.5 test truth is not distributed. The current Task-1 contract has 32,285 ordered genes, no spatial coordinates, and a `T1:val` board. The machine-readable `T1:val` index reported 1,000–5,118 cells, while evaluation prose said at least 1,000 with no cap. This companion enforces the dated index as a conservative local preflight policy; it does not resolve the official disagreement, and the upload service/organizers remain authoritative. Check the [Task 1 page](https://virtualembryo.ai/challenge/tasks/temporal), [timeline](https://virtualembryo.ai/challenge/timeline), [data contract](https://virtualembryo.ai/challenge/data), [panel index](https://virtualembryo.ai/challenge/panels/index.json), and [submission page](https://virtualembryo.ai/challenge/account/submissions) again before upload: requirements can change.
+As checked on 2026-09-20, Task 1 uses E8.5 and E9.5 released training stages, E10.5 validation, and E12.5 test; the Task-1 release has no E9.25. E10.5 validation truth is currently withheld and evaluated through the leaderboard; the official schedule says it will be released at the final phase on 2026-10-20. E12.5 test truth is not distributed. The current Task-1 contract has 32,285 ordered genes, no spatial coordinates, and a `T1:val` board. The machine-readable `T1:val` index and data-page prose specify 1,000–5,118 cells, while evaluation prose says at least 1,000 with no cap. This companion enforces the dated index as a conservative local preflight policy; it does not resolve the official disagreement, and the upload service/organizers remain authoritative. Check the [Task 1 page](https://virtualembryo.ai/challenge/tasks/temporal), [timeline](https://virtualembryo.ai/challenge/timeline), [data contract](https://virtualembryo.ai/challenge/data), [panel index](https://virtualembryo.ai/challenge/panels/index.json), and [submission page](https://virtualembryo.ai/challenge/account/submissions) again before upload: requirements can change.
 
 ## What this corrects without republishing the baseline notebook
 
@@ -53,7 +53,7 @@ pip install -e '.[notebook]'
 jupyter lab
 ```
 
-Local Jupyter is the only supported notebook path in this candidate. Google Colab is not assessed or supported.
+Local Jupyter is the only supported notebook path. Google Colab is not assessed or supported.
 
 For a non-interactive reproducibility run from the project directory:
 
@@ -110,7 +110,7 @@ The output uses precisely that order and a `SYNTHETIC:T1:val` contract. It is us
      --reference /path/to/released/E8.5_RNA.h5ad
    ```
 
-   Record the installed `veckit` version/commit because its public implementation is evolving. This does not preview a leaderboard score. As of 2026-09-11, withheld E10.5 validation truth is evaluated by the **official challenge server**; E12.5 test truth is never distributed. See the official [evaluation](https://virtualembryo.ai/challenge/evaluation), [baseline/scorer references](https://virtualembryo.ai/challenge/baselines), and [rules](https://virtualembryo.ai/challenge/rules).
+   Record the installed `veckit` version/commit because its public implementation is evolving. This does not preview a leaderboard score. As of 2026-09-20, withheld E10.5 validation truth is evaluated by the **official challenge server**; E12.5 test truth is never distributed. See the official [evaluation](https://virtualembryo.ai/challenge/evaluation), [baseline/scorer references](https://virtualembryo.ai/challenge/baselines), and [rules](https://virtualembryo.ai/challenge/rules).
 
 ## Why gene order is a release gate
 
@@ -136,4 +136,4 @@ notebooks/               runnable synthetic tutorial
 tests/                   structural/adversarial tests
 ```
 
-Read [TESTING.md](TESTING.md), [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md), [CHANGELOG.md](CHANGELOG.md), and the repository-level [license proposal](../../LICENSE_PROPOSED.md) before publishing or adapting this work.
+Read [TESTING.md](TESTING.md), [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md), [CHANGELOG.md](CHANGELOG.md), and the repository-level [license](../../LICENSE) and [attribution](../../ATTRIBUTION.md) before adapting this work.

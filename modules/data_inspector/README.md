@@ -136,7 +136,9 @@ the tool reported no attention findings; it does not establish normalization,
 biological quality, board eligibility, or official submission acceptance. It
 must not be used to automatically authorize an upload.
 
-For a readable HDF5 file with a malformed but inspectable layout, `vec-inspect` writes the normal Markdown/JSON report and exits `0`; inspect the terminal `attention` section and report fields marked `invalid` or `not assessed`. **Exit `0` means only that the report was generated, not that the file or any component is valid.** For an unreadable/non-HDF5 input, inaccessible file, invalid command arguments, a mid-run source change, or report-output collision, it prints a concise `vec-inspect:` diagnostic to stderr, writes no new report artifacts, and exits `2`. Expected malformed inputs do not produce a traceback.
+By default, for a readable HDF5 file with a malformed but inspectable layout, `vec-inspect` writes the normal Markdown/JSON report and exits `0`; inspect the terminal `attention` section and report fields marked `invalid` or `not assessed`. **Exit `0` means only that the report was generated, not that the file or any component is valid.** An unreadable/non-HDF5 input, inaccessible file, invalid command arguments, a mid-run source change, or report-writing error produces a concise diagnostic on stderr and exits `2`. Expected malformed inputs do not produce a traceback.
+
+Failures before report writing create no report artifacts. Report creation is exclusive per file, not transactional across the bundle: a late collision or write failure can leave earlier artifacts, or a partially written new file. Existing files are not overwritten or rolled back. After a failure, inspect any remaining artifacts and choose a fresh report directory; do not delete another writer's files.
 
 ## Read-only behavior
 
